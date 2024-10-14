@@ -1,38 +1,75 @@
 body {
     margin: 0;
-    background-color: white;
+    background-color: #f8f8f8; /* 浅灰色背景 */
+    font-family: Arial, sans-serif; /* 通用字体 */
 }
 
-code {
-    white-space: pre;
+.container {
+    max-width: 1200px; /* 限制容器最大宽度 */
+    margin: auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
 }
 
-h1 {
-    margin-top: 0px;
-    padding-top: 20px;
+/* 搜索栏样式 */
+.search-form {
+    margin-top: 20px;
+    text-align: center; /* 搜索框居中 */
 }
 
-textarea {
-    height: 90vh;
-    width: 80%;
+.search-input {
+    width: 70%; /* 搜索框宽度 */
+    padding: 10px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    border: 2px solid #369; /* 边框颜色和大小 */
+    border-radius: 5px; /* 圆角边框 */
 }
 
-.main {
-    padding: 10px;
+.search-button {
+    padding: 10px 20px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    color: white; /* 文字颜色 */
+    background-color: #369; /* 背景颜色 */
+    border: none; /* 无边框 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标手形 */
+    margin-left: 5px; /* 左边距 */
 }
 
-.search {
-    width: 100%;
-    font-size: 15px;
-    line-height: 15px;
+.search-button:hover {
+    background-color: #2a6496; /* 鼠标悬停时的背景颜色 */
 }
 
+/* 侧边栏样式 */
 .sidebar {
-    background-color: #f0f0f0;
-    height: 100vh;
+    background-color: #fff; /* 白色背景 */
+    height: 100vh; /* 满屏高度 */
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 轻微阴影 */
+    position: sticky;
+    top: 0; /* 粘性侧边栏 */
 }
 
 .sidebar h2 {
     margin-top: 5px;
+    color: #333; /* 深灰色文字 */
+}
+
+/* 导航链接样式 */
+.nav-link {
+    color: #369;
+    font-weight: bold;
+    text-decoration: none; /* 无下划线 */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* 鼠标悬停时下划线 */
+}
+
+/* 主内容区域样式 */
+.main-content {
+    background-color: #fff; /* 白色背景 */
+    padding: 20px;
+    border-radius: 5px; /* 圆角边框 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 轻微阴影 */
+    margin-bottom: 20px; /* 底部边距 */
 }

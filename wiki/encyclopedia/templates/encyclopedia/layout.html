@@ -11,25 +11,21 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 sidebar">
                 <h2>Wiki</h2>
-                <form method="get" action="{% url 'search' %}">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="q" placeholder="Search...">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Search</button>
-                        </div>
-                    </div>
+                <form method="get" action="{% url 'search' %}" class="search-form">
+                    <input type="text" class="form-control search-input" name="query" placeholder="Search...">
+                    <button class="btn btn-outline-secondary search-button" type="submit">Search</button>
                 </form>
                 <nav>
                     <ul>
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="{% url 'new_entry' %}">Create New Page</a></li>
-                        <li><a href="{% url 'random_entry' %}">Random Page</a></li>
+                        <li><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                        <li><a href="{% url 'new_entry' %}" class="nav-link">Create New Page</a></li>
+                        <li><a href="{% url 'random_entry' %}" class="nav-link">Random Page</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 main-content">
                 {% block body %}{% endblock %}
             </div>
         </div>
